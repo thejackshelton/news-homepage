@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 
-import HeroImage from '../assets/images/image-web-3-mobile.jpg?url';
+import HeroImage from '../assets/images/image-web-3-mobile.jpg';
 import FigmaImage from '../assets/images/heroheader.png?url';
 
 import { Image } from '@astrojs/image/components';
@@ -18,7 +18,7 @@ import { Image } from '@astrojs/image/components';
         src={FigmaImage}
         alt="Test"
       /> -->
-      <img class="hero-image-mobile" src={HeroImage} />
+      <Image class="hero-image-mobile" src={HeroImage} alt="" />
       <!-- <img class="hero-image-mobile" src={HeroImage} alt="" /> -->
     </div>
     <h1>The Bright Future of Web 3.0?</h1>
