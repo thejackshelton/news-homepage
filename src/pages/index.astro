@@ -1,15 +1,89 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+
+import HeroImage from '../assets/images/image-web-3-mobile.jpg';
+
+import { Image } from '@astrojs/image/components';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="News Homepage">
+  <main>
+    <Header />
+    <div>
+      <Image
+        height={300}
+        class="hero-image-mobile"
+        src={HeroImage}
+        alt="Test"
+      />
+    </div>
+    <h1>The Bright Future of Web 3.0?</h1>
+
+    <p>
+      We dive into the next evolution of the web that claims to put the power of
+      the platforms back into the hands of the people. But is it really
+      fulfilling its promise?
+    </p>
+
+    <a href="/future-of-web-3">Read more</a>
+
+    <h2>New</h2>
+
+    <h3>Hydrogen VS Electric Cars</h3>
+    <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+
+    <h3>The Downsides of AI Artistry</h3>
+    <p>
+      What are the possible adverse effects of on-demand AI image generation?
+    </p>
+    <h3>Is VC Funding Drying Up?</h3>
+    <p>
+      Private funding by VC firms is down 50% YOY. We take a look at what that
+      means.
+    </p>
+
+    <span>01</span>
+    <h4>Reviving Retro PCs</h4>
+    <p>happens when old PCs are given modern upgrades?</p>
+
+    <span>02</span>
+    <h4>Top 10 Laptops of 2022</h4>
+    <p>Our best picks for various needs and budgets.</p>
+
+    <span>03</span>
+    <h4>The Growth of Gaming</h4>
+    <p>How the pandemic has sparked fresh opportunities.</p>
+
+    <div class="attribution">
+      Challenge by <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank">Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    padding: 28px 16px;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--almostWhite);
+  }
+
+  .hero-image-mobile {
+    width: 100%;
+    object-fit: initial;
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+</style>

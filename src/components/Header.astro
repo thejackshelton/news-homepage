@@ -1,0 +1,57 @@
+---
+import Logo from '../assets/images/logo.svg?url';
+import iconOpen from '../assets/images/icon-menu.svg?url';
+import iconClose from '../assets/images/icon-menu-close.svg?url';
+---
+
+<header>
+  <section class="mobile-header">
+    <div class="logo-wrapper">
+      <a href="/">
+        <img class="logo" src={Logo} />
+      </a>
+    </div>
+    <button class="menu-button">
+      <img class="icon-open" src={iconOpen} />
+      <img class="icon-close" src={iconClose} />
+    </button>
+  </section>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/new">New</a></li>
+      <li><a href="/popular">Popular</a></li>
+      <li><a href="/trending">Trending</a></li>
+      <li><a href="/categories">Categories</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    line-height: 0;
+    margin-bottom: 2rem;
+  }
+
+  .menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icon-close {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+</style>
